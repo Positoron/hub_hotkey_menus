@@ -9,108 +9,167 @@ return {
     ["zh-cn"] = "通过快捷键打开哀星号上的各种菜单。",
     ru = "Hub Hotkey Menus - Открывайте различные меню в Хабе с помощью горячих клавиш.",
   },
-  enable_in_pykhanium = {
-    en = "Enable Hotkeys in the Psykhanium",
-    ru = "Включить горячие клавиши в " .. Localize("loc_training_ground_view") .. "е",
-    ["zh-cn"] = "在灵能室启用快捷键",
-  },
+  options = {
+		en = "Options",
+    ["zh-cn"] = "选项",
+    ru = "Настройки"
+	},
+	keybinds = {
+		en = "Keybinds",
+    ["zh-cn"] = "快捷键",
+    ru = "Cочетания Клавиш"
+	},
   close_menu_with_hotkey = {
-    en = "Close menus",
-    ru = "Закрытие меню клавишами",
+    en = "Close menus",    
     ["zh-cn"] = "关闭菜单",
+    ru = "Закрытие меню клавишами",
   },
-  close_menu_with_hotkey_tooltip = {
-    en = "Enables the closing of menus with their respective hotkeys.",
-    ru = "Позволяет закрывать меню с помощью соответствующих горячих клавиш.",
+  close_menu_with_hotkey_description = {
+    en = "Enables the closing of menus with their respective hotkeys.",    
     ["zh-cn"] = "允许用对应的快捷键关闭菜单。",
+    ru = "Позволяет закрывать меню с помощью соответствующих горячих клавиш.",
   },
-  -- barber_vendor_background_view
-  open_barber_view_key = {
-    en = "Barber",
-    ["zh-cn"] = "理发师",
-    ru = Localize("loc_body_shop_view_display_name"),
+  enable_in_psykhanium = {
+    en = "Enable Hotkeys in the Psykhanium",    
+    ["zh-cn"] = "在灵能室启用快捷键",
+    ru = "Включить горячие клавиши в " .. Localize("loc_training_ground_view") .. "е",
+  },  
+  enable_inv_in_psykhanium = {
+    en = "Enable Inventory in the Psykhanium",    
+    ["zh-cn"] = "你可以在灵能室打开背包。",
+    ru = "Вы можете открыть инвентарь в "  .. Localize("loc_training_ground_view") .. "е",
   },
-  open_barber_view_key_description = {
-    en = "Opens the Barber view.",
-    ["zh-cn"] = "打开理发师兼外科医生界面。",
-    ru = "Открывает меню изменения Внешности персонажа.",
+  -- inventory_background_view
+  open_inventory_background_view_key = {
+    en = "Inventory Key in the Psykhanium",
+    ["zh-cn"] = "灵能室打开背包",
+    ru = "Инвентарь в "  .. Localize("loc_training_ground_view") .. "е",
   },
+  open_inventory_background_view_key_description = {
+    en = "Opens the Loadout, Cosmetics, Masteries & Talents menu.",
+    ["zh-cn"] = "打开背包界面。",
+    ru = "Открывает меню Инвентарь.",
+  }, 
+  -- credits_vendor_background_view
+  open_credits_vendor_view_key = {
+    en = "Armoury Exchange",
+    ["zh-cn"] = "商店",
+    ru = Localize("loc_vendor_view_title"),
+  },
+  open_credits_vendor_view_key_description = {
+    en = "Opens the Weapons & Curios Requisitions vendor.",
+    ["zh-cn"] = "打开军械交易所界面。",
+    ru = "Открывает меню покупки Снаряжения.",
+  }, 
   -- contracts_background_view
   open_contracts_view_key = {
-    en = "Contracts",
+    en = "Sir Melk's Requisitorium",
     ["zh-cn"] = "协议",
     ru = Localize("loc_marks_vendor_view_title"),
   },
   open_contracts_view_key_description = {
-    en = "Opens the Contracts view.",
+    en = "Opens the Contracts & Acquisitions menu.",
     ["zh-cn"] = "打开梅尔克大人的采购店界面。",
     ru = "Открывает меню управления Контрактами.",
   },
   -- crafting_view
   open_crafting_view_key = {
-    en = "Crafting",
+    en = "Shrine of the Omnissiah",
     ["zh-cn"] = "锻造",
     ru = Localize("loc_crafting_view"),
   },
   open_crafting_view_key_description = {
-    en = "Opens the Crafting view.",
+    en = "Opens Hadron's Crafting & Sacrifice Weapons menu.",
     ["zh-cn"] = "打开 O-7-7 海德昂界面。",
     ru = "Открывает меню Создания и улучшения предметов.",
   },
-  -- credits_vendor_background_view
-  open_credits_vendor_view_key = {
-    en = "Credits Vendor",
-    ["zh-cn"] = "商店",
-    ru = Localize("loc_vendor_view_title"),
+  -- commisarry_view
+  open_commissary_view_key = {
+    en = "Commissary",
+    ["zh-cn"] = "杂货店",
+    ru = Localize("loc_cosmetics_vendor_view_title"),
   },
-  open_credits_vendor_view_key_description = {
-    en = "Opens the Credits Vendor view.",
-    ["zh-cn"] = "打开军械交易所界面。",
-    ru = "Открывает меню покупки Снаряжения.",
-  },
-  -- inbox_view
-  open_inbox_view_key = {
-    en = "Inbox",
-    ["zh-cn"] = "信件",
-    ru = "Послания",
-  },
-  open_inbox_view_key_description = {
-    en = "Opens the Inbox view.",
-    ["zh-cn"] = "打开信件界面。",
-    ru = "Открывает меню Выкупить любой лишний предмет.",
-  },
-  -- mission_board_view
-  open_mission_board_view_key = {
-    en = "Mission Board",
-    ["zh-cn"] = "任务面板",
-    ru = Localize("loc_mission_board_view"),
-  },
-  open_mission_board_view_key_description = {
-    en = "Opens the Mission Board view.",
-    ["zh-cn"] = "打开任务面板。",
-    ru = "Открывает меню выбора Миссий.",
+  open_commissary_view_key_description = {
+    en = "Opens the Operative & Weapon Cosmetics vendor.",
+    ["zh-cn"] = "打开杂货店界面。",
+    ru = "Открывает меню магазина Косметических предметов.",
   },
   -- store_view
-  open_premium_store_view_key = {
-    en = "Premium Store",
+  open_store_view_key = {
+    en = "The Commodore's Vestures",
     ["zh-cn"] = "高级商店",
     ru = Localize("loc_store_view_display_name"),
   },
-  open_premium_store_view_key_description = {
-    en = "Opens the Premium Store view.",
+  open_store_view_key_description = {
+    en = "Opens the Premium Cosmetics vendor.",
     ["zh-cn"] = "打开准将的服装界面。",
     ru = "Открывает магазин с Премиумным снаряжением.",
   },
+  -- barber_vendor_background_view
+  open_barber_view_key = {
+    en = "Barber-Chirurgeon",
+    ["zh-cn"] = "理发师",
+    ru = Localize("loc_body_shop_view_display_name"),
+  },
+  open_barber_view_key_description = {
+    en = "Opens the Modify Appearance & Personality Scourge menu.",
+    ["zh-cn"] = "打开理发师兼外科医生界面。",
+    ru = "Открывает меню изменения Внешности персонажа.",
+  },
+  -- penance_view
+  open_penance_view_key = {
+    en = "Shrine Penitentax",
+    ["zh-cn"] = "神龛忏悔者",
+    ru = "Искупления",
+  },
+  open_penance_view_key_description = {
+    en = "Opens the Penances menu.",
+    ["zh-cn"] = "打开苦修界面。",
+    ru = "Открывает меню Искуплений.",
+  },
   -- training_grounds_view
   open_training_grounds_view_key = {
-    en = "Training Grounds",
+    en = "Psykhanium",
     ["zh-cn"] = "训练场",
     ru = Localize("loc_training_ground_view"),
   },
   open_training_grounds_view_key_description = {
-    en = "Opens the Training Grounds view.",
+    en = "Opens the Training Grounds & Meat Grinder menu.",
     ["zh-cn"] = "打开灵能室界面。",
     ru = "Открывает меню входа на Стрельбище.",
+  },
+  -- mission_board_view
+  open_mission_board_view_key = {
+    en = "Mission Terminal",
+    ["zh-cn"] = "任务面板",
+    ru = Localize("loc_mission_board_view"),
+  },
+  open_mission_board_view_key_description = {
+    en = "Opens the Mission Terminal.",
+    ["zh-cn"] = "打开任务面板。",
+    ru = "Открывает меню выбора Миссий.",
+  },
+  -- havoc_background_view
+  open_havoc_background_view = {
+    en = "Dukane's Havoc Terminal",
+    ["zh-cn"] = "浩劫模式",
+    ru = "Верная Смерть",
+  },
+  open_havoc_background_view_description = {
+    en = "Opens the Havoc Terminal.",
+    ["zh-cn"] = "打开浩劫模式",
+    ru = "Открывает меню выбора Верная Смерть.",
+  },
+  -- group_finder_view
+  open_group_finder_view = {
+    en = "Party Finder",
+    ["zh-cn"] = "隊伍搜尋器",
+    ru = "Поиск Группы",
+  },
+  open_group_finder_view_description = {
+    en = "Opens the Party Finder.",
+    ["zh-cn"] = "打开隊伍搜尋器。",
+    ru = "Открывает меню Поиск Группы.",
   },
   -- social_view
   open_social_view_key = {
@@ -119,39 +178,8 @@ return {
     ru = "Социальное меню",
   },
   open_social_view_key_description = {
-    en = "Opens the Social view.",
+    en = "Opens the Social menu.",
     ["zh-cn"] = "打开社交界面。",
     ru = "Открывает меню управления Ударной группой, Друзьями, Приглашениями.",
-  },
-  open_commissary_view_key = {
-    en = "Commissary",
-    ["zh-cn"] = "杂货店",
-    ru = Localize("loc_cosmetics_vendor_view_title"),
-  },
-  open_commissary_view_key_description = {
-    en = "Opens the Commissary view.",
-    ["zh-cn"] = "打开杂货店界面。",
-    ru = "Открывает меню магазина Косметических предметов.",
-  },
-  open_penance_view_key = {
-    en = "Shrine Penitentax",
-    ["zh-cn"] = "神龛忏悔者",
-    ru = "Искупления",
-  },
-  open_penance_view_key_description = {
-    en = "Opens the Penance view.",
-    ["zh-cn"] = "打开苦修界面。",
-    ru = "Открывает меню Искуплений.",
-  },
-  -- havoc_background
-  open_havoc_background_view = {
-    en = "Havoc Mode",
-    ["zh-cn"] = "Havoc Mode",
-    ru = "Havoc Mode",
-  },
-  open_havoc_background_view_description = {
-    en = "Opens the Havoc Menu.",
-    ["zh-cn"] = "Opens the Havoc Menu.",
-    ru = "Opens the Havoc Menu.",
   },
 }
