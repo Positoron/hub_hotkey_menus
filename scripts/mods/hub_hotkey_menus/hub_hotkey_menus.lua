@@ -76,6 +76,7 @@ end
 
 local activate_hub_view = function(view)
 	local ui_manager = Managers.ui
+  close_views_check = mod:get("close_menu_with_hotkey")
 
 	if ui_manager and close_views(view, ui_manager) and can_activate_view(ui_manager, view) then
 		local context = {
@@ -88,89 +89,77 @@ end
 
 local activate_psykhanium_view = function(view)
 	local ui_manager = Managers.ui
-
+  valid_lvls["hub"] = false
+  close_views_check = true
+  
 	if ui_manager and close_views(view, ui_manager) and can_activate_psykhanium_view(ui_manager, view) then
 		local context = {
 			hub_interaction = true
 		}
-
+    
 		ui_manager:open_view(view, nil, nil, nil, nil, context)
 	end
+  
+  valid_lvls["hub"] = true
+  close_views_check = mod:get("close_menu_with_hotkey")
 end
 
 -- ##########################################################
 -- ################## Functions #############################
 
 mod.activate_inventory_background_view = function(self)
-  close_views_check = true
-  valid_lvls["hub"] = false
   activate_psykhanium_view("inventory_background_view")
-  valid_lvls["hub"] = true
-  close_views_check = mod:get("close_menu_with_hotkey")
 end
 
 mod.activate_credits_vendor_background_view = function(self)
-  close_views_check = mod:get("close_menu_with_hotkey")
   activate_hub_view("credits_vendor_background_view")
 end
 
 mod.activate_contracts_background_view = function(self)
-  close_views_check = mod:get("close_menu_with_hotkey")
   activate_hub_view("contracts_background_view")
 end
 
 mod.activate_crafting_view = function(self)
-  close_views_check = mod:get("close_menu_with_hotkey")
   activate_hub_view("crafting_view")
 end
 
 mod.activate_commissary_view = function(self)
-  close_views_check = mod:get("close_menu_with_hotkey")
 	activate_hub_view("cosmetics_vendor_background_view")
 end
 
 mod.activate_store_view = function(self)
-  close_views_check = mod:get("close_menu_with_hotkey")
   activate_hub_view("store_view")
 end
 
 mod.activate_barber_vendor_background_view = function(self)
-  close_views_check = mod:get("close_menu_with_hotkey")
   activate_hub_view("barber_vendor_background_view")
 end
 
 mod.activate_penance_overview_view = function(self)
-  close_views_check = mod:get("close_menu_with_hotkey")
 	activate_hub_view("penance_overview_view")
 end
 
 mod.activate_training_grounds_view = function(self)
-  close_views_check = mod:get("close_menu_with_hotkey")
   activate_hub_view("training_grounds_view")
 end
 
 mod.activate_mission_board_view = function(self)
-  close_views_check = mod:get("close_menu_with_hotkey")
   activate_hub_view("mission_board_view")
 end
 
 mod.activate_havoc_background_view = function(self)
-  close_views_check = mod:get("close_menu_with_hotkey")
 	activate_hub_view("havoc_background_view")
 end
 
 mod.activate_group_finder_view = function(self)
-  close_views_check = mod:get("close_menu_with_hotkey")
 	activate_hub_view("group_finder_view")
 end
 
 mod.activate_social_view = function(self)
-  close_views_check = mod:get("close_menu_with_hotkey")
 	activate_hub_view("social_menu_view")
 end
 
 -- mod.activate_main_menu_view = function(self)
--- 	close_views_check = mod:get("close_menu_with_hotkey")
 -- 	activate_hub_view("main_menu_background_view")
 -- end
 
